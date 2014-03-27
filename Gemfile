@@ -3,20 +3,22 @@ ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'guard-rspec'
-  gem 'spork-rails'
-  gem 'guard-spork'
-  gem 'childprocess'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'
 end
 
 group :test do
-  gem 'selenium-webdriver'
-  gem 'capybara'
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
   gem 'growl'
 end
 
