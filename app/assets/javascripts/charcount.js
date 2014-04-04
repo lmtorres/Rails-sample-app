@@ -1,15 +1,17 @@
 var ready;
 ready = function() {
-	document.getElementById('micropost_content').onkeyup = function() {
+	var countElement = document.getElementById('count');
+	var contentElement = document.getElementById('micropost_content');
+	contentElement.onkeyup = function() {
 		var count = (140 - this.value.length);
 		if (count < 0){
-			document.getElementById('count').style.color = "#ff0000";
-			document.getElementById('micropost_content').style.border = "1px solid #b94a48";
-		} else{
-			document.getElementById('count').style.color = "#000000";
-			document.getElementById('micropost_content').style.border = "1px solid #bbb";
+			countElement.style.color = "#ff0000";
+			contentElement.style.border = "1px solid #b94a48";
+		}else{
+			countElement.style.color = "#000000";
+			contentElement.style.border = "1px solid #bbbbbb";
 		}
-		document.getElementById('count').innerHTML = count + " characters left";
+		countElement.innerHTML = count + " characters left";
 	};
 };
 
